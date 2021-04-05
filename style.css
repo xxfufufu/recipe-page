@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+.recipe-container {
+    background-color: #FAFAFA;
+    max-width: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 32px 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+}
+
+.wrapper-item {
+    display: grid;
+    grid-template-columns: 1fr;   
+    grid-template-rows: auto;
+    grid-row-gap: 12px;
+}
+
+.name-item {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+}
+
+.description-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.descr  {
+    padding: 0 50px 0 10px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    color: #4F4F4F;
+}
+
+.chesse-cake{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.wrapper-ingredients {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 12px;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+}
+fieldset {
+    border: none;
+}
+legend {
+    font-family: Playfair Display;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 12px;
+    color: #333333;
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    color: #333333;
+    align-items: baseline;
+}
+
+label {
+    padding-left: 12px;
+}
+
+input[type=checkbox] {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.wrapper-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 12px;
+}
+
+.intruction-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+}
+.steps {
+    grid-column-gap: 10px;
+    display: grid;
+    grid-template-columns: 36px auto;
+    grid-template-rows: auto;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.number {
+    width: 36px;
+    height: 36px;
+    background-color: #F2994A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.source {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 18px;
+    color: #BDBDBD;
+}
+
+.wrapper-serving {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "yields yields yields"
+    "prep cook total";
+    grid-gap: 15px;
+}
+.material-icons {
+    margin-right: 5px;
+}
+
+.what {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #BDBDBD;    
+}
+
+.orange {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #F2994A;
+}
+.total {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #333;
+}
+
+.yields {
+    grid-area: yields;
+}
+
+
+.prep {
+    grid-area: prep;
+}
+
+.cook {
+    grid-area: cook;
+}
+
+.total {
+    grid-area: total;
+}
+
+.format {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #828282;
+}
+
+@media (min-width: 800px) {
+    .recipe-container {
+        max-width: 1000px;
+        grid-template-columns: 1fr 0.2fr;
+        grid-template-areas: 
+        "item item"
+        "ingredients serving"
+        "steps serving"
+        "source source"
+        "footer footer";
+        grid-column-gap: 50px;
+    }
+    .wrapper-item {
+        grid-area: item;
+    }
+    .wrapper-ingredients {
+        grid-area: ingredients;
+    }
+    .wrapper-serving {
+        grid-area: serving;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+        width: fit-content;
+        padding: 25px 10px;
+    }
+    .wrapper-steps {
+        grid-area: steps;
+    }
+    .source {
+        grid-area: source;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
